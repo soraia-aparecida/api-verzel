@@ -6,11 +6,11 @@
 
 ### Como usar
 
-- Cadastrar novo usuário: usar o endpoint signup. Passanod via body as seguintes informações: name, email, password e role. Para role temos duas duas opções: 'ADMIN' ou 'NORMA'L.
+- Cadastrar novo usuário: usar o endpoint signup. Passanod via body as seguintes informações: name, email, password e role. Para role temos duas duas opções: 'ADMIN' ou 'NORMAL'.
 
 - Login: usar o endpoint login. Passando via body as seguintes informações: email, password.
 
-- Pegar todos os módulos disponíveis: usar o endpoint getAllModule. Basta o usuário bater nesse endpoint de retornor todos os módulos, não é necessário passar nenhuma informação. 
+- Pegar todos os módulos disponíveis: usar o endpoint getAllModule. Basta o usuário bater nesse endpoint de retornar todos os módulos, não é necessário passar nenhuma informação. 
 
 - Criar novo módulo: usar o enpoint createModule. Primeiro o usuário faz login, depois, com o token que é liberado no login, ele bate nesse endpoint de cadastrar novo módulo, colocando o token, no campo de Headers - Authorization, e passando no campo Body, a seguinte informação: name. Somente usuários ADMIN podem realizar essa operação.
 
@@ -19,6 +19,8 @@
 - Deletar módulo: usar o enpoint deleteModule. Primeiro o usuário faz login, depois, com o token que é liberado no login, ele bate nesse endpoint de deletar módulo, colocando o token, no campo de Headers - Authorization, e passando no campo Body, a seguinte informação: id. Somente usuários ADMIN podem realizar essa operação.
 
 - Pegar todas as aulas disponíveisde um módulo: usar o endpoint getAllClasseByModule. Basta o usuário bater nesse endpoint de retornor todas as aulas de módulos, é necessário passar o Request Params - id.
+
+- Criar nova aula: usar o enpoint createClasse. Primeiro o usuário faz login, depois, com o token que é liberado no login, ele bate nesse endpoint de cadastrar nova aula, colocando o token, no campo de Headers - Authorization, e passando no campo Body, a seguinte informação: name, classDate e moduleId. Somente usuários ADMIN podem realizar essa operação.
 
 - Editar aula: usar o enpoint editClasse. Primeiro o usuário faz login, depois, com o token que é liberado no login, ele bate nesse endpoint de editar aula, colocando o token, no campo de Headers - Authorization, e passando no campo Body, a seguinte informação: name e classDate. Somente usuários ADMIN podem realizar essa operação.
 
@@ -40,7 +42,7 @@
 - Heroku
 
 ### Documentação do Postaman
-
+https://documenter.getpostman.com/view/18384258/UVsSP4cV
 
 ### Documentação do Heroku
 https://desafio-verzel-soraia.herokuapp.com/
