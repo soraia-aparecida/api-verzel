@@ -37,7 +37,7 @@ export class ClasseBusiness {
         const checkExistenceModuleOfId = await moduleDatabase.getModuleById(classe.moduleId)
 
         if (!checkExistenceModuleOfId) {
-            throw new CustomError(409, "Módulo não cadastrado no nosso banco de dados.")
+            throw new CustomError(404, "Módulo não cadastrado no nosso banco de dados.")
         }
 
         const checkExistenceClasseOfName = await classeDatabase.getClasseByName(classe.name)
@@ -76,7 +76,7 @@ export class ClasseBusiness {
         const checkExistenceOfId = await classeDatabase.getClasseById(input.id)
 
         if (!checkExistenceOfId) {
-            throw new CustomError(409, "Aula não cadastrado no nosso banco de dados.")
+            throw new CustomError(404, "Aula não cadastrada no nosso banco de dados.")
         }
 
         const dateFormatted = corretDate.sendDateToDB(input.classDate)
@@ -88,7 +88,7 @@ export class ClasseBusiness {
         const checkExistenceModuleOfId = await moduleDatabase.getModuleById(id)
 
         if (!checkExistenceModuleOfId) {
-            throw new CustomError(409, "Módulo não cadastrado no nosso banco de dados.")
+            throw new CustomError(404, "Módulo não cadastrado no nosso banco de dados.")
         }
 
         const classes = await classeDatabase.getAllClasse(id)
@@ -125,7 +125,7 @@ export class ClasseBusiness {
         const checkExistenceOfId = await classeDatabase.getClasseById(id)
 
         if (!checkExistenceOfId) {
-            throw new CustomError(409, "Aula não cadastrado no nosso banco de dados.")
+            throw new CustomError(404, "Aula não cadastrado no nosso banco de dados.")
         }
 
         await classeDatabase.deleteClasse(id)

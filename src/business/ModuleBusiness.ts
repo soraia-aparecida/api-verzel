@@ -64,7 +64,7 @@ export class ModuleBusiness {
         const checkExistenceOfId = await moduleDatabase.getModuleById(id)
 
         if (!checkExistenceOfId) {
-            throw new CustomError(409, "Módulo não encontrado, por gentileza informar um id válido.")
+            throw new CustomError(404, "Módulo não encontrado, por gentileza informar um id válido.")
         }
 
         await moduleDatabase.editModule(id, name)
@@ -96,7 +96,7 @@ export class ModuleBusiness {
         const checkExistenceOfId = await moduleDatabase.getModuleById(id)
 
         if (!checkExistenceOfId) {
-            throw new CustomError(409, "Módulo não encontrado, por gentileza informar um id válido.")
+            throw new CustomError(404, "Módulo não encontrado, por gentileza informar um id válido.")
         }
 
         await moduleDatabase.deleteModule(id)
