@@ -1,6 +1,6 @@
 import *  as  jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
-import { AuthenticationData } from '../model/AuthenticationData'
+import { AuthenticationData } from '../model/authenticationData'
 
 dotenv.config()
 
