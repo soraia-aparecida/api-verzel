@@ -125,7 +125,9 @@ export class ClasseBusiness {
         const checkExistenceOfId = await classeDatabase.getClasseById(id)
 
         if (!checkExistenceOfId) {
-            throw new CustomError(404, "Aula não cadastrada no nosso banco de dados.")
+
+            throw new CustomError(404, "Aula não cadastrado no nosso banco de dados.")
+
         }
 
         await classeDatabase.deleteClasse(id)
