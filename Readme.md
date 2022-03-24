@@ -28,6 +28,7 @@
 
 * Para mais informações, sobre como usar essa API, consultar a documentação no Postaman, pois nela, tem exemplos de como usar cada enpoint.
 
+
 ### Tecnologias utulizadas:
 - Typescript
 - Node.js
