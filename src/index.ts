@@ -10,10 +10,9 @@ dotenv.config()
 
 const app: Express = express();
 app.use(express.json())
-app.use(cors())
 
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin", "https://desafio-verzel-soraia.herokuapp.com");
     res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
     app.use(cors());
     next();
