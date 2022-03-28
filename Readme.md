@@ -2,7 +2,7 @@
 
 ### Descrição
 - API para o site de uma escola
-- Principais funcionalidades: cadastrar/visualizar/excluir informações de usuários e módulos e aulas. 
+- Principais funcionalidades: cadastrar/visualizar/excluir informações de usuários, módulos e aulas. 
 
 ### Como usar
 
