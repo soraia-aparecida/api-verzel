@@ -28,6 +28,10 @@
 
 * Para mais informações, sobre como usar essa API, consultar a documentação no Postaman, pois nela, tem exemplos de como usar cada enpoint.
 
+### Dados para login:
+- email: soraia@gmail.com
+- password: 123456
+- caso prefira, pode criar um novo usuário.
 
 ### Tecnologias utulizadas:
 - Typescript
