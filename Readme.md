@@ -51,3 +51,6 @@ https://documenter.getpostman.com/view/18384258/UVsSP4cV
 
 ### Documentação do Heroku
 https://desafio-verzel-soraia.herokuapp.com/
+
+### Banco de Dados:
+- o banco de dados utilizado foi o MySQl, e utilizei a query builder Knex.js, para realizar as mudanças nesse banco. No código tem a pasta data, que é onde fiz a requisições.  
