@@ -1,4 +1,4 @@
-# API Verzel
+# Desafio Verzel: Back-end - API Rest
 
 ### Descrição
 - API para o site de uma escola
