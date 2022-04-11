@@ -64,4 +64,18 @@ export class ModuleController {
             res.status(error.code || 400).send(error.message || error.sqlMessage)
         }
     }
+
+    public getModuleByIdController = async (req: Request, res: Response): Promise<void> => {
+
+        try {
+            const id = req.params.id
+            const module = await moduleBusiness.getModuleById(id)
+
+            res.status(200).send({ module })
+
+        } catch (error: any) {
+            res.status(error.code || 400).send(error.message || error.sqlMessage)
+        }
+    }
 }
+
