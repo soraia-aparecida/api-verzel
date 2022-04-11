@@ -14,11 +14,15 @@
 
 - Criar novo módulo: usar o enpoint createModule. Primeiro o usuário faz login, depois, com o token que é liberado no login, ele bate nesse endpoint de cadastrar novo módulo, colocando o token, no campo de Headers - Authorization, e passando no campo Body, a seguinte informação: name. Somente usuários ADMIN podem realizar essa operação.
 
+- Pegar módulo por id: usar o endpoinit getModuleById. Basta o usuário bater nesse endpoint de retornar as infomações de um módulo, é necessário passar o Request Params - id.
+
 - Editar módulo: usar o enpoint editModule. Primeiro o usuário faz login, depois, com o token que é liberado no login, ele bate nesse endpoint de editar módulo, colocando o token, no campo de Headers - Authorization, e passando no campo Body, a seguinte informação: name. Somente usuários ADMIN podem realizar essa operação.
 
 - Deletar módulo: usar o enpoint deleteModule. Primeiro o usuário faz login, depois, com o token que é liberado no login, ele bate nesse endpoint de deletar módulo, colocando o token, no campo de Headers - Authorization, e passando no campo Body, a seguinte informação: id. Somente usuários ADMIN podem realizar essa operação.
 
 - Pegar todas as aulas disponíveisde um módulo: usar o endpoint getAllClasseByModule. Basta o usuário bater nesse endpoint de retornor todas as aulas de módulos, é necessário passar o Request Params - id.
+
+- Pegar aula por id: usar o endpoinit getClasseById. Basta o usuário bater nesse endpoint de retornar as infomações de uma aula, é necessário passar o Request Params - id.
 
 - Criar nova aula: usar o enpoint createClasse. Primeiro o usuário faz login, depois, com o token que é liberado no login, ele bate nesse endpoint de cadastrar nova aula, colocando o token, no campo de Headers - Authorization, e passando no campo Body, a seguinte informação: name, classDate e moduleId. Somente usuários ADMIN podem realizar essa operação.
 
