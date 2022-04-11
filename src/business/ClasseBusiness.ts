@@ -61,7 +61,7 @@ export class ClasseBusiness {
             throw new CustomError(401, "Para realizar essa operação é necessário ter token de autorização")
         }
 
-        if(!input.name || !input.classDate){
+        if (!input.name || !input.classDate) {
             throw new CustomError(422, "Para editar uma aula é necessário informar o seguinte campos: name e classDate.")
         }
 
@@ -125,11 +125,29 @@ export class ClasseBusiness {
         const checkExistenceOfId = await classeDatabase.getClasseById(id)
 
         if (!checkExistenceOfId) {
-
             throw new CustomError(404, "Aula não cadastrado no nosso banco de dados.")
 
         }
 
         await classeDatabase.deleteClasse(id)
+    }
+
+    public getClasseByIdBusiness = async (id: string): Promise<Classe> => {
+
+        const checkExistenceOfId = await classeDatabase.getClasseById(id)
+
+        if (!checkExistenceOfId) {
+            throw new CustomError(404, "Aula não cadastrado no nosso banco de dados.")
+        }
+
+        const classe = await classeDatabase.getClasseById(id)
+        const result: any = {
+            id: classe.getId(),
+            name: classe.getName(),
+            classDate: corretDate.currentDateFormatted(classe.getClassDate()),
+            muduleId: classe.getModuleId()
+        }
+
+        return result
     }
 }

@@ -101,4 +101,19 @@ export class ModuleBusiness {
 
         await moduleDatabase.deleteModule(id)
     }
+
+    public getModuleById = async (id: string): Promise<Module> => {
+
+        if (!id) {
+            throw new CustomError(422, "Para excluir um módulo é necessário informar um id.")
+        }
+
+        const checkExistenceOfId = await moduleDatabase.getModuleById(id)
+
+        if (!checkExistenceOfId) {
+            throw new CustomError(404, "Módulo não encontrado, por gentileza informar um id válido.")
+        }
+
+        return await moduleDatabase.getModuleById(id)
+    }
 }

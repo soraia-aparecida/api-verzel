@@ -71,4 +71,17 @@ export class ClasseController {
             res.status(error.code || 400).send(error.message || error.sqlMessage)
         }
     }
+
+    public getClasseByIdController = async (req: Request, res: Response): Promise<void> => {
+
+        try {
+            const id = req.params.id
+            const classe = await classeBusiness.getClasseByIdBusiness(id)
+
+            res.status(200).send({ classe })
+
+        } catch (error: any) {
+            res.status(error.code || 400).send(error.message || error.sqlMessage)
+        }
+    }
 }

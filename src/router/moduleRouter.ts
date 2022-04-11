@@ -6,6 +6,7 @@ export const moduleRouter = express.Router()
 const moduleController = new ModuleController()
 
 moduleRouter.get('/', moduleController.getAllModuleController)
+moduleRouter.get('/:id', moduleController.getModuleByIdController)
 moduleRouter.post('/add', moduleController.createModuleController)
 moduleRouter.put('/edit/:id', moduleController.editModuleController)
 moduleRouter.delete('/delete', moduleController.deleteModuleController)
